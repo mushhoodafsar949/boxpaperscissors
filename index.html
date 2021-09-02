@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Paper Scissors</title>
+    <link rel="stylesheet" href="Css_stylesheet/sliderstylesheet.css">
+</head>
+
+<body onload="slider()">
+
+    <div class="banner">
+        <div class="slider">
+            <img src="Images/slider images/img1.jpeg" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+
+                <div class="logo">
+                    <h1>Box Paper Scissors</h1>
+                </div>
+
+                <div class="menu-icons">
+                    <img src="Images/Navbar Images/user.svg" id="User">
+                    <img src="Images/Navbar Images/delivery.svg" id="About">
+                    <img src="Images/Navbar Images/shopping-cart.svg">
+                </div>
+
+            </div>
+            <div class="content">
+                <h1>Welcome All To My Website</h1>
+                <p style="margin-top: 15px; font-size: larger;">Hello My name is Shizza Mushhood and its been 6 years
+                    now that I have
+                    creating my own artifacts. you
+                    all are welcome to my website from the core of my heart. It has been 2 years that Boxpaperscissors
+                    has been working for you all to provide it's customers the prettiest and the most uniquely designed
+                    gift boxes🎁, scrapbooks📚, gift bouquets🌹 and gift baskets🧺 at their doorsteps😍The best thing is
+                    that anything can be customized according to the customer demand💕I keep on generating many new
+                    offers and discount on every event to make you get maximum benefit and up-to 60% discounts✨
+                    Here's to the completion of two years and looking forward to many more years. ❤</p>
+                <div>
+                    <button type="button" onclick="window.location.href='index1.html'">Skip</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sayhello(){
+            window.location.href = "index2.html";
+        }
+     document.getElementById("User").onclick=sayhello;
+    </script>
+
+ <script>
+    function sayhello2(){
+        window.location.href = "aboutindex.html";
+    }
+ document.getElementById("About").onclick=sayhello2;
+</script>
+    <script>
+        var slideImg= document.getElementById("slideImg");
+        var images= new Array(
+            "Images/slider images/img1.jpeg",
+            "Images/slider images/img2.jpeg",
+            "Images/slider images/img3.jpeg",
+            "Images/slider images/img4.jpeg",
+            "Images/slider images/img5.jpeg",
+            "Images/slider images/img6.jpeg",
+            "Images/slider images/img7.jpeg"
+
+        );
+        var len= images.length;
+        var i=0;
+        function slider(){
+            if(i>len-1){
+                i=0;
+            }
+            slideImg.src=images[i];
+            i++;
+            setTimeout('slider()',4000);
+        }
+    </script>
+
+</body>
+
+</html>
